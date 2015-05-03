@@ -1,6 +1,8 @@
 # forme-geometrice
 Forme Geometrice - having fun
 
+## Diagrama de clase
+![Diagrama de Clase](https://raw.githubusercontent.com/paulbrodner/forme-geometrice/master/uml/diagrama_de_clase.png)
 ## UML tool
 [ObjectAid UML Explorer](http://www.objectaid.com/) (free)
 * Eclipse, Help > Install New Software
