@@ -1,4 +1,4 @@
-# forme-geometrice
+# Forme Geometrice [![Build Status](https://travis-ci.org/paulbrodner/forme-geometrice.svg?branch=master)](https://travis-ci.org/paulbrodner/forme-geometrice)
 Forme Geometrice - having fun
 
 ## Diagrama de clase
