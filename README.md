@@ -2,7 +2,7 @@
 Forme Geometrice - having fun
 
 ## Class Diagram
-![Diagrama de Clase](https://raw.githubusercontent.com/paulbrodner/forme-geometrice/master/uml/diagrama_de_clase.png)
+![Diagrama de Clase](https://raw.githubusercontent.com/paulbrodner/forme-geometrice/master/uml/class_diagram.png)
 ## UML tool
 [ObjectAid UML Explorer](http://www.objectaid.com/) (free)
 * Eclipse, Help > Install New Software
