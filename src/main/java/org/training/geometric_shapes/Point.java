@@ -1,13 +1,13 @@
-package org.training.forma_geometrica;
+package org.training.geometric_shapes;
 
 /**
  * @author Paul Brodner
  */
-public class Punct {
+public class Point {
 	private int x;
 	private int y;
 
-	public Punct(int x, int y) {
+	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}
