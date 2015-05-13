@@ -10,10 +10,13 @@ import org.training.geometric_shapes.exception.ShapeNotValidException;
  */
 public class Rectangle extends Parallelogram {
 
-	public Rectangle(Point x, Point y, Point z, Point t) throws ShapeNotValidException {
-		super(x, y, z, t);
+    public Rectangle(Point upperLeft, int width, int hight) throws ShapeNotValidException{
+    	super(upperLeft, 
+    		  new Point(upperLeft.getX() + width,upperLeft.getY()), 
+    		  new Point(upperLeft.getX() + width,upperLeft.getY() - hight), 
+    		  new Point(upperLeft.getX(), upperLeft.getY() - hight));
 	}
-
+	
 	/* height x width */
 	public double area() {
 		return sideAB * sideBC;

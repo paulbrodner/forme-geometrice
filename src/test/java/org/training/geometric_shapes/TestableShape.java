@@ -3,9 +3,7 @@ package org.training.geometric_shapes;
 import org.training.geometric_shapes.exception.ShapeNotValidException;
 
 public interface TestableShape {
-	public void testShapeIsValid() throws ShapeNotValidException;
-
-	public void testShapeNotValid();
+	public void testShape() throws ShapeNotValidException;
 
 	public void testPerimeter() throws ShapeNotValidException;
 

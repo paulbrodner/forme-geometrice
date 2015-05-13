@@ -8,7 +8,7 @@ import org.training.geometric_shapes.polygonal.quadrilateral.Square;
 
 public class SquareTest extends TestCase implements TestableShape {
 
-	public void testShapeIsValid() throws ShapeNotValidException {
+	public void testShape() throws ShapeNotValidException {
 		// TODO Auto-generated method stub
 		
 	}
