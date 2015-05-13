@@ -1,4 +1,8 @@
-package org.training.geometric_shapes;
+package org.training.geometric_shapes.polygonal.quadrilateral;
+
+import org.training.geometric_shapes.Point;
+import org.training.geometric_shapes.exception.ShapeNotValidException;
+import org.training.geometric_shapes.polygonal.Polygon;
 
 /**
  * Info {@link "http://ro.wikipedia.org/wiki/Patrulater"}
@@ -20,14 +24,16 @@ public abstract class Quadrilateral extends Polygon {
 	 * @param y
 	 * @param z
 	 * @param t
+	 * @throws ShapeNotValidException 
 	 */
-	public Quadrilateral(Point x, Point y, Point z, Point t) {
+	public Quadrilateral(Point x, Point y, Point z, Point t) throws ShapeNotValidException {
 		super(x, y, z, t);
 		this.sideAB = getDistance(x, y);
 		this.sideBC = getDistance(y, z);
 		this.sideCD = getDistance(z, t);
 		this.sideDA = getDistance(t, x);
 		this.hight = getDistance(x, new Point(x.getX(), t.getY()));
+		validateShape();
 	}
 
 	public double perimeter() {
@@ -37,4 +43,18 @@ public abstract class Quadrilateral extends Polygon {
 	public double area() {
 		return 0;
 	}
+	
+	@Override
+	public String toString() {
+		return new StringBuilder("sideAB=")
+					.append(sideAB)
+					.append(", sideBC=")
+					.append(sideBC)
+					.append(", sideCD")
+					.append(sideCD)
+					.append(", sideDA")
+					.append("sideDA")
+					.toString();
+	}
+
 }

@@ -1,27 +1,74 @@
 package org.training.geometric_shapes;
 
-import org.training.geometric_shapes.Point;
-import org.training.geometric_shapes.Rectangle;
-
-import junit.framework.Assert;
 import junit.framework.TestCase;
+import static org.hamcrest.MatcherAssert.assertThat;
+import org.hamcrest.CoreMatchers;
+import org.training.geometric_shapes.exception.ShapeNotValidException;
+import org.training.geometric_shapes.polygonal.quadrilateral.Rectangle;
 
-/**
- * S-a luat in considerare doar un caz valid pentru acest obiect. Asadar nu avem
- * un unit testing complet.
- *
- */
-public class RectangleTest extends TestCase {
+public class RectangleTest extends TestCase implements TestableShape {
 
-	private Rectangle rectangle = new Rectangle(new Point(2, 3), 
-												   new Point(8, 3), 
-												   new Point(8, 0), 
-												   new Point(3, 0));
-	public void testPerimeter() {
-		Assert.assertEquals(17.16, Output.doubleFormat(rectangle.perimeter()));
+	Rectangle rectangle;
+
+	public void testShapeIsValid() throws ShapeNotValidException {
+		rectangle = new Rectangle(new Point(0, 2), 
+								  new Point(3, 2), 
+								  new Point(3, 0), 
+								  new Point(0, 0));
 	}
 
-	public void testArie() {
-		Assert.assertEquals(18.0, Output.doubleFormat(rectangle.area()));
+	public void testShapeNotValid() {
+		try {
+			rectangle = new Rectangle(new Point(1, 5), 
+									  new Point(8, 5),
+									  new Point(8, 0), 
+									  new Point(0, 0));
+		} catch (ShapeNotValidException e) {
+			assertThat(e.getMessage(), CoreMatchers.containsString("Rectangle is not valid"));
+			return;
+		}
+		fail("expected ShapeNotValidException for Rectangle");
+	}
+	
+	public void testShapeNotValidOnAngle() {
+		try {
+			rectangle = new Rectangle(new Point(0, 2), 
+					  				  new Point(3, 2), 
+					                  new Point(3, 0), 
+					                  new Point(0, 0));
+		} catch (ShapeNotValidException e) {
+			assertThat(e.getMessage(), CoreMatchers.containsString("Rectangle is not valid"));
+			return;
+		}
+		fail("expected ShapeNotValidException for Rectangle with degree != 90");
+	}
+
+	public void testPerimeter() throws ShapeNotValidException {
+		rectangle = new Rectangle(new Point(0, 2), 
+								  new Point(3, 2), 
+								  new Point(3, 0), 
+								  new Point(0, 0));
+		assertEquals(10.00, Output.doubleFormat(rectangle.perimeter()));
+	}
+
+	public void testArea() throws ShapeNotValidException {
+		rectangle = new Rectangle(new Point(0, 2), 
+								  new Point(3, 2), 
+								  new Point(3, 0), 
+								  new Point(0, 0));
+		assertEquals(6.0, Output.doubleFormat(rectangle.area()));
+	}
+
+	public void testRectangleIsNotSquare() {
+		try {
+			rectangle = new Rectangle(new Point(0, 2), 
+									  new Point(2, 2),
+									  new Point(2, 0), 
+									  new Point(0, 0));
+		} catch (ShapeNotValidException e) {
+			assertThat(e.getMessage(), CoreMatchers.containsString("Rectangle is not valid"));
+			return;
+		}
+		fail("expected ShapeNotValidException for Rectangle");
 	}
 }

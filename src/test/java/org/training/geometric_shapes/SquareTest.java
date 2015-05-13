@@ -1,26 +1,34 @@
 package org.training.geometric_shapes;
 
-import junit.framework.Assert;
 import junit.framework.TestCase;
 
-import org.training.geometric_shapes.Square;
+import org.training.geometric_shapes.exception.ShapeNotValidException;
+import org.training.geometric_shapes.polygonal.quadrilateral.Square;
 
-/**
- * S-a luat in considerare doar un caz valid pentru acest obiect. Asadar nu avem
- * un unit testing complet.
- *
- */
-public class SquareTest extends TestCase {
 
-	private Square square = new Square(8);
+public class SquareTest extends TestCase implements TestableShape {
+
+	public void testShapeIsValid() throws ShapeNotValidException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void testShapeNotValid() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void testPerimeter() throws ShapeNotValidException {
+		Square square = new Square(8);
+		assertEquals(32.0, square.perimeter());
+		
+		
+	}
+
+	public void testArea() throws ShapeNotValidException {
+		Square square = new Square(8);
+		assertEquals(64.0, square.area());
+	}
 	
-
-	public void testPerimetru() {
-		Assert.assertEquals(32.0, square.perimeter());
-	}
-
-	public void testArie() {
-		Assert.assertEquals(64.0, square.area());
-	}
 }
 
