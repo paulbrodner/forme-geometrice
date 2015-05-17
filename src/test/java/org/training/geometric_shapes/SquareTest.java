@@ -12,7 +12,7 @@ public class SquareTest extends TestCase implements TestableShape {
 	public void testValidShape() throws ShapeNotValidException {
 		Square square = new Square(4);
 		assertEquals(square.toString(),
-				"sideAB=4.0, sideBC=4.0, sideCD=4.0, sideDA=4.0");
+				"Square: sideAB=4.0, sideBC=4.0, sideCD=4.0, sideDA=4.0");
 	}
 
 	public void testShapeNotValid() {

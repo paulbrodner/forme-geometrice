@@ -109,7 +109,7 @@
     project="forme-geometrice" 
     file="/forme-geometrice/src/main/java/org/training/geometric_shapes/polygonal/quadrilateral/Square.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="207" width="231" x="325" y="724"/>    
+    <position height="-1" width="-1" x="451" y="948"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      

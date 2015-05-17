@@ -13,7 +13,7 @@ public class RectangleTest extends TestCase implements TestableShape {
 	public void testValidShape() throws ShapeNotValidException {
 		rectangle = new Rectangle(new Point(0, 2), 3, 2);
 		assertEquals(rectangle.toString(),
-				"sideAB=3.0, sideBC=2.0, sideCD=3.0, sideDA=2.0");
+				"Rectangle: sideAB=3.0, sideBC=2.0, sideCD=3.0, sideDA=2.0");
 	}
 
 	public void testShapeNotValid() throws ShapeNotValidException {
