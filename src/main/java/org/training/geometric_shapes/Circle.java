@@ -11,9 +11,11 @@ import org.training.geometric_shapes.exception.ShapeNotValidException;
 public class Circle extends GeometricShape {
 
 	private double radius;
+	private Point center;
 
-	public Circle() throws ShapeNotValidException {
+	public Circle(Point center,double radius) throws ShapeNotValidException {
 		setRadius(radius);
+		this.center = center;
 		validateShape();
 	}
 
@@ -39,18 +41,28 @@ public class Circle extends GeometricShape {
 	}
 
 	public boolean isValid() {
-		return false;
+		return getRadius() > 0 ;
 	}
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		return new StringBuilder(this.getClass().getSimpleName())
+				.append(": radius=")
+				.append(getRadius()).toString();
 	}
 
 	@Override
 	public boolean equals(GeometricShape shape) {
-		// TODO Auto-generated method stub
+		if (shape == this)
+			return true;
+		if (!(shape instanceof Circle) || shape == null)
+			return false;
+
 		return false;
 	}
+
+	public Point getCenter() {
+		return center;
+	}
+
 }

@@ -11,22 +11,16 @@ import org.training.geometric_shapes.exception.ShapeNotValidException;
  *
  */
 public class Square extends Quadrilateral {
-	private int side;
-
-	public Square(Point x, Point y, Point z, Point t) throws ShapeNotValidException {
-		super(x, y, z, t);
-		this.side = (int) getDistance(x, y);
-		validateShape();
+	private double side;
+	
+	public Square(int side) throws ShapeNotValidException {	
+		this(new Point(0, 0), new Point(0, side), new Point(side, side), new Point(side, 0));
 	}
 	
-	public int getSide() {
-		return side;
-	}
-
-	public Square(int latura) throws ShapeNotValidException {
-		// just for fun
-		super(new Point(0, 0), new Point(0, latura), new Point(latura, latura), new Point(latura, 0));
-		this.side = latura;
+	private Square(Point x, Point y, Point z, Point t) throws ShapeNotValidException {
+		super(x, y, z, t);
+		this.side = getDistance(x, y);
+		validateShape();
 	}
 
 	public double perimeter() {
@@ -38,13 +32,7 @@ public class Square extends Quadrilateral {
 	}
 
 	public boolean isValid() {
-		return sideAB==sideBC && sideCD==sideDA;
-	}
-
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+		return sideAB==sideBC && sideCD==sideDA && getCoordinates().get(1).getY() > 0;
 	}
 
 	@Override
@@ -55,6 +43,10 @@ public class Square extends Quadrilateral {
 			return false;
 
 		return false;
+	}
+	
+	public double getSide() {
+		return side;
 	}
 
 }

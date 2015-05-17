@@ -10,27 +10,31 @@ public class RectangleTest extends TestCase implements TestableShape {
 
 	Rectangle rectangle;
 
-	public void testShape() throws ShapeNotValidException {
+	public void testValidShape() throws ShapeNotValidException {
 		rectangle = new Rectangle(new Point(0, 2), 3, 2);
-	}
-	
-	public void testPerimeter() throws ShapeNotValidException {
-		rectangle = new Rectangle(new Point(0, 2),3,2);
-		assertEquals(10.00, Output.doubleFormat(rectangle.perimeter()));
+		assertEquals(rectangle.toString(),
+				"sideAB=3.0, sideBC=2.0, sideCD=3.0, sideDA=2.0");
 	}
 
-	public void testArea() throws ShapeNotValidException {
-		rectangle = new Rectangle(new Point(0, 2),3, 2);
-		assertEquals(6.0, Output.doubleFormat(rectangle.area()));
-	}
-
-	public void testRectangleIsNotSquare() {
+	public void testShapeNotValid() throws ShapeNotValidException {
 		try {
-			rectangle = new Rectangle(new Point(0, 2),2,2);
+			rectangle = new Rectangle(new Point(0, 2), 2, 2);
 		} catch (ShapeNotValidException e) {
-			assertThat(e.getMessage(), CoreMatchers.containsString("Rectangle is not valid"));
+			assertThat(e.getMessage(),
+					CoreMatchers.containsString("Rectangle is not valid"));
 			return;
 		}
 		fail("expected ShapeNotValidException for Rectangle");
 	}
+
+	public void testPerimeter() throws ShapeNotValidException {
+		rectangle = new Rectangle(new Point(0, 2), 3, 2);
+		assertEquals(10.00, Output.doubleFormat(rectangle.perimeter()));
+	}
+
+	public void testArea() throws ShapeNotValidException {
+		rectangle = new Rectangle(new Point(0, 2), 3, 2);
+		assertEquals(6.0, Output.doubleFormat(rectangle.area()));
+	}
+
 }

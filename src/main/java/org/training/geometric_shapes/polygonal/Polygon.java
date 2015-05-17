@@ -48,19 +48,7 @@ public abstract class Polygon extends GeometricShape {
 	 * @return
 	 */
 	public double getDistance(Point p1, Point p2) {
-		return Math.hypot(p2.getX() - p1.getX(), p2.getY() - p1.getY());
-	}
-
-	/**
-	 * @param a
-	 * @param b
-	 * @return angle between this two points
-	 */
-	public double getAngle(Point p1, Point p2) {
-		final double deltaY = (p1.getY() - p2.getY());
-		final double deltaX = (p2.getX() - p1.getX());
-		final double result = Math.toDegrees(Math.atan2(deltaY, deltaX));
-		return (result < 0) ? (360d + result) : result;
+		return Math.hypot(p2.getX() - p1.getX(), p2.getY() - p1.getY());	
 	}
 
 }

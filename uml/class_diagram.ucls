@@ -1,150 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.8" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
-  <class id="1" language="java" name="org.training.geometric_shapes.polygonal.Polygon" project="forme-geometrice" 
-    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/polygonal/Polygon.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="838" y="109"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="2" language="java" name="org.training.geometric_shapes.Output" project="forme-geometrice" 
-    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/Output.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1036" y="649"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="3" language="java" name="org.training.geometric_shapes.polygonal.quadrilateral.Parallelogram" 
+  <class id="1" language="java" name="org.training.geometric_shapes.exception.ShapeNotValidException" 
     project="forme-geometrice" 
-    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/polygonal/quadrilateral/Parallelogram.java" 
+    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/exception/ShapeNotValidException.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="166" y="555"/>    
+    <position height="135" width="263" x="41" y="405"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="org.training.geometric_shapes.polygonal.quadrilateral.Rectangle" 
-    project="forme-geometrice" 
-    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/polygonal/quadrilateral/Rectangle.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="164" y="730"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="5" language="java" name="org.training.geometric_shapes.polygonal.quadrilateral.Quadrilateral" 
-    project="forme-geometrice" 
-    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/polygonal/quadrilateral/Quadrilateral.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="448" y="337"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="6" language="java" name="org.training.geometric_shapes.Point" project="forme-geometrice" 
-    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/Point.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1085" y="106"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="7" language="java" name="org.training.geometric_shapes.Circle" project="forme-geometrice" 
+  <class id="2" language="java" name="org.training.geometric_shapes.Circle" project="forme-geometrice" 
     file="/forme-geometrice/src/main/java/org/training/geometric_shapes/Circle.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="199" y="101"/>    
+    <position height="279" width="187" x="365" y="405"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="8" language="java" name="org.training.geometric_shapes.Computable" project="forme-geometrice" 
+  <interface id="3" language="java" name="org.training.geometric_shapes.Computable" project="forme-geometrice" 
     file="/forme-geometrice/src/main/java/org/training/geometric_shapes/Computable.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="553" y="53"/>    
+    <position height="-1" width="-1" x="948" y="-57"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="9" language="java" name="org.training.geometric_shapes.polygonal.quadrilateral.Square" 
+  <class id="4" language="java" name="org.training.geometric_shapes.GeometricShape" project="forme-geometrice" 
+    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/GeometricShape.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="153" width="193" x="718" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="5" language="java" name="org.training.geometric_shapes.Validable" project="forme-geometrice" 
+    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/Validable.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="748" y="-43"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="6" language="java" name="org.training.geometric_shapes.polygonal.Polygon" project="forme-geometrice" 
+    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/polygonal/Polygon.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="292" x="758" y="230"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="org.training.geometric_shapes.polygonal.Triangle" project="forme-geometrice" 
+    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/polygonal/Triangle.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="187" x="592" y="405"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="org.training.geometric_shapes.polygonal.quadrilateral.Parallelogram" 
+    project="forme-geometrice" 
+    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/polygonal/quadrilateral/Parallelogram.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="231" x="819" y="724"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="org.training.geometric_shapes.polygonal.quadrilateral.Quadrilateral" 
+    project="forme-geometrice" 
+    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/polygonal/quadrilateral/Quadrilateral.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="225" width="231" x="819" y="405"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="org.training.geometric_shapes.polygonal.quadrilateral.Rectangle" 
+    project="forme-geometrice" 
+    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/polygonal/quadrilateral/Rectangle.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="231" x="819" y="971"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="org.training.geometric_shapes.polygonal.quadrilateral.Square" 
     project="forme-geometrice" 
     file="/forme-geometrice/src/main/java/org/training/geometric_shapes/polygonal/quadrilateral/Square.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="439" y="591"/>    
+    <position height="207" width="231" x="325" y="724"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="org.training.geometric_shapes.polygonal.Trapeze" project="forme-geometrice" 
-    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/polygonal/Trapeze.java" binary="false" 
+  <class id="12" language="java" name="org.training.geometric_shapes.CompositeClient" project="forme-geometrice" 
+    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/CompositeClient.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="667" y="573"/>    
+    <position height="-1" width="-1" x="460" y="271"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="org.training.geometric_shapes.polygonal.Triangle" project="forme-geometrice" 
-    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/polygonal/Triangle.java" binary="false" 
+  <class id="13" language="java" name="org.training.geometric_shapes.CompositeGeometricShape" project="forme-geometrice" 
+    file="/forme-geometrice/src/main/java/org/training/geometric_shapes/CompositeGeometricShape.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="838" y="343"/>    
+    <position height="-1" width="-1" x="459" y="97"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="12">    
-    <end type="SOURCE" refId="10"/>    
+  <dependency id="14">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <realization id="15">    
+    <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="5"/>  
+  </realization>  
+  <generalization id="16">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="8"/>  
   </generalization>  
-  <generalization id="13">    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="1"/>  
-  </generalization>  
-  <association id="14">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="15" name="coordinates"/>      
-      <multiplicity id="16" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
   <generalization id="17">    
-    <end type="SOURCE" refId="11"/>    
-    <end type="TARGET" refId="1"/>  
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="4"/>  
   </generalization>  
   <generalization id="18">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <dependency id="19">    
+    <bendpoint x="334" y="405"/>    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <generalization id="20">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <dependency id="21">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <realization id="22">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <generalization id="19">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="5"/>  
-  </generalization>  
-  <generalization id="20">    
+  </realization>  
+  <dependency id="23">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <generalization id="24">    
     <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="5"/>  
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <generalization id="25">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <association id="26">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="27" name="geometricShapes"/>      
+      <multiplicity id="28" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="29">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <generalization id="30">    
+    <bendpoint x="727" y="230"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="4"/>  
   </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="true" signature="true" 
     sort-features="false" accessors="true" visibility="true">    

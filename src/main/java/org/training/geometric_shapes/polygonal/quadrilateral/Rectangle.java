@@ -15,6 +15,7 @@ public class Rectangle extends Parallelogram {
     		  new Point(upperLeft.getX() + width,upperLeft.getY()), 
     		  new Point(upperLeft.getX() + width,upperLeft.getY() - hight), 
     		  new Point(upperLeft.getX(), upperLeft.getY() - hight));
+    	validateShape();
 	}
 	
 	/* height x width */

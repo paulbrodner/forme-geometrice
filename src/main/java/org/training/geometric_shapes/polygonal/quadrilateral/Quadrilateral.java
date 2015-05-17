@@ -33,7 +33,6 @@ public abstract class Quadrilateral extends Polygon {
 		this.sideCD = getDistance(z, t);
 		this.sideDA = getDistance(t, x);
 		this.hight = getDistance(x, new Point(x.getX(), t.getY()));
-		validateShape();
 	}
 
 	public double perimeter() {
@@ -46,14 +45,15 @@ public abstract class Quadrilateral extends Polygon {
 	
 	@Override
 	public String toString() {
-		return new StringBuilder("sideAB=")
+		return new StringBuilder(this.getClass().getSimpleName())
+					.append(": sideAB=")
 					.append(sideAB)
 					.append(", sideBC=")
 					.append(sideBC)
-					.append(", sideCD")
+					.append(", sideCD=")
 					.append(sideCD)
-					.append(", sideDA")
-					.append("sideDA")
+					.append(", sideDA=")
+					.append(sideDA)
 					.toString();
 	}
 
