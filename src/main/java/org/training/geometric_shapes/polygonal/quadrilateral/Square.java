@@ -39,10 +39,11 @@ public class Square extends Quadrilateral {
 	public boolean equals(GeometricShape shape) {
 		if (shape == this)
 			return true;
-		if (!(shape instanceof Square) || shape == null)
+		if (shape == null || !(shape instanceof Square))
 			return false;
-
-		return false;
+		
+		Square r = (Square)shape;
+		return equalsCoordinates(r.getCoordinates());
 	}
 	
 	public double getSide() {

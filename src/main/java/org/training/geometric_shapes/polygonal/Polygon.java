@@ -51,4 +51,17 @@ public abstract class Polygon extends GeometricShape {
 		return Math.hypot(p2.getX() - p1.getX(), p2.getY() - p1.getY());	
 	}
 
+	public boolean equalsCoordinates(List<Point> coordinates){
+		if(coordinates==null || getCoordinates().size()!=coordinates.size()){
+			return false;
+		}
+		boolean isEqual = false;
+		for (int i = 0; i < getCoordinates().size(); i++) {
+			isEqual = getCoordinates().get(i).equals(coordinates.get(i));
+			if(isEqual==false){
+				return false;
+			}
+		}
+		return isEqual;
+	}
 }

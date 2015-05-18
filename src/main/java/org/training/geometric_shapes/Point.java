@@ -19,4 +19,8 @@ public class Point {
 	public int getY() {
 		return y;
 	}
+	
+	public boolean equals(Point point){
+		return getX()==point.getX() && getY() == point.getY();
+	}
 }

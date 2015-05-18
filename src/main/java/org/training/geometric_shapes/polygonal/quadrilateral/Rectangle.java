@@ -31,9 +31,10 @@ public class Rectangle extends Parallelogram {
 	public boolean equals(GeometricShape shape) {
 		if (shape == this)
 			return true;
-		if (!(shape instanceof Rectangle) || shape == null)
+		if (shape == null || !(shape instanceof Rectangle))
 			return false;
-
-		return false;
+		
+		Rectangle r = (Rectangle)shape;
+		return equalsCoordinates(r.getCoordinates());
 	}
 }

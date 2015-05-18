@@ -46,13 +46,12 @@ public class Triangle extends Polygon {
 	public boolean equals(GeometricShape shape) {
 		if (shape == this)
 			return true;
-		if (!(shape instanceof Triangle) || shape == null)
+		if (shape == null || !(shape instanceof Triangle))
 			return false;
-	    
-   	    
-	    return false;
+		
+		Triangle t = (Triangle)shape;
+		return equalsCoordinates(t.getCoordinates());
 	}
-
 	@Override
 	public String toString() {
 		return  new StringBuilder(this.getClass().getSimpleName())
