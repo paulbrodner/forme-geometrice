@@ -3,6 +3,8 @@ package org.training.geometric_shapes.polygonal;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.training.geometric_shapes.Computable;
+import org.training.geometric_shapes.Drawable;
 import org.training.geometric_shapes.GeometricShape;
 import org.training.geometric_shapes.Point;
 import org.training.geometric_shapes.exception.ShapeNotValidException;
@@ -14,7 +16,7 @@ import org.training.geometric_shapes.exception.ShapeNotValidException;
  * @author Paul Brodner
  *
  */
-public abstract class Polygon extends GeometricShape {
+public abstract class Polygon extends GeometricShape implements Drawable, Computable {
 
 	private ArrayList<Point> coordinates = new ArrayList<Point>();
 
@@ -48,20 +50,25 @@ public abstract class Polygon extends GeometricShape {
 	 * @return
 	 */
 	public double getDistance(Point p1, Point p2) {
-		return Math.hypot(p2.getX() - p1.getX(), p2.getY() - p1.getY());	
+		return Math.hypot(p2.getX() - p1.getX(), p2.getY() - p1.getY());
 	}
 
-	public boolean equalsCoordinates(List<Point> coordinates){
-		if(coordinates==null || getCoordinates().size()!=coordinates.size()){
+	public boolean equalsCoordinates(List<Point> coordinates) {
+		if (coordinates == null
+				|| getCoordinates().size() != coordinates.size()) {
 			return false;
 		}
 		boolean isEqual = false;
 		for (int i = 0; i < getCoordinates().size(); i++) {
 			isEqual = getCoordinates().get(i).equals(coordinates.get(i));
-			if(isEqual==false){
+			if (isEqual == false) {
 				return false;
 			}
 		}
 		return isEqual;
+	}
+
+	public void draw() {
+		System.out.println(toString());
 	}
 }
