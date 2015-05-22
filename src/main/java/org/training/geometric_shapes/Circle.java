@@ -8,7 +8,7 @@ import org.training.geometric_shapes.exception.ShapeNotValidException;
  * @author Paul Brodner
  *
  */
-public class Circle extends GeometricShape {
+public class Circle extends GeometricShape implements Computable{
 
 	private double radius;
 	private Point center;

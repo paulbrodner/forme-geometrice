@@ -37,4 +37,5 @@ public class Rectangle extends Parallelogram {
 		Rectangle r = (Rectangle)shape;
 		return equalsCoordinates(r.getCoordinates());
 	}
+
 }
